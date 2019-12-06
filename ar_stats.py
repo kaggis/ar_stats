@@ -186,7 +186,7 @@ if __name__ == "__main__":
         required=False,
         dest="input")
     parser.add_argument(
-        "-c", "--csv", metavar="STRING", help="comma separated file list of host,service,group,",
+        "-c", "--csv", metavar="PATH", help="path to a csv file with lines host,service,group,",
         required=False,
         dest="csv")
     parser.add_argument(
@@ -196,9 +196,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "-a", "--api", metavar="STRING", help="api endpoint to connect to", required=True, dest="api")
     parser.add_argument(
-        "-t", "--token", metavar="PATH", help="access token", required=True, dest="token")
+        "-t", "--token", metavar="STRING", help="access token", required=True, dest="token")
     parser.add_argument(
-        "-r", "--report", metavar="PATH", help="report name", required=True, dest="report")
+        "-r", "--report", metavar="STRING", help="report name", required=True, dest="report")
 
     # Pass the arguments to main method
     sys.exit(main(parser.parse_args()))
